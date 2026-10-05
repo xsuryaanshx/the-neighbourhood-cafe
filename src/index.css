@@ -248,7 +248,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 16px 24px;
+  box-sizing: border-box;
 }
 
 .brand-wrapper {
@@ -1625,7 +1626,7 @@ img {
 
   /* 1. Global Spacing & Layout */
   .container, .container-wide {
-    padding: 0 18px;
+    padding: 0 20px !important;
   }
 
   .section {
@@ -1666,23 +1667,31 @@ img {
   }
 
   .nav-container {
-    padding: 12px 0;
+    padding: 12px 20px !important;
+    box-sizing: border-box;
   }
 
   .brand-wrapper {
     gap: 10px;
+    align-items: center;
   }
 
   .brand-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 1.05rem;
+    width: 34px;
+    height: 34px;
     border-radius: 9px;
+    background: var(--cozy-celadon);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
   .brand-name {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
     line-height: 1;
+    font-weight: 500;
   }
 
   .brand-sub {
@@ -1690,9 +1699,11 @@ img {
   }
 
   .nav-reserve-btn {
-    padding: 7px 15px;
-    font-size: 0.78rem;
+    padding: 8px 18px;
+    font-size: 0.8rem;
     font-weight: 600;
+    border-radius: 999px;
+    flex-shrink: 0;
   }
 
   /* 4. Beautiful, Unclustered Hero */

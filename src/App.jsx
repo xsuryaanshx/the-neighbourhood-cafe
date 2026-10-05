@@ -135,30 +135,30 @@ export default function App() {
             <span className="cozy-tag">A quiet sunlit sanctuary in Saket</span>
             
             <h1 className="hero-headline">
-              A place to slow down, <br />
+              A place to slow down, <br className="desktop-br" />
               sip slow coffee, and <em>breathe.</em>
             </h1>
 
             <p className="hero-description">
-              Tucked behind a mint wrought-iron gate in Indore. Morning sunlight pouring through our glasshouse solarium, warm sourdough baking in the hearth, and quiet stone steps for starlit evenings.
+              Tucked behind a mint wrought-iron gate in Saket. Sunlit glasshouse solarium, hearth-baked sourdough, and unhurried coffee for slow hours.
             </p>
 
             <div className="hero-buttons-row">
               <motion.a
                 href="#reserve"
                 className="btn-honey"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <span>Save a Table for Me</span>
+                <span>Save a Table</span>
                 <span>→</span>
               </motion.a>
 
               <motion.a
                 href="#showcase"
                 className="btn-linen"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <span>Explore Signatures</span>
               </motion.a>

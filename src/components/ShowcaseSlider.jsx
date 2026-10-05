@@ -139,6 +139,22 @@ export default function ShowcaseSlider({ onReserveDish }) {
             transition={{ type: 'spring', stiffness: 350, damping: 28 }}
           >
             
+            {/* Mobile Nav Arrows */}
+            <button
+              className="slider-nav-arrow slider-nav-prev"
+              onClick={handlePrev}
+              aria-label="Previous creation"
+            >
+              ‹
+            </button>
+            <button
+              className="slider-nav-arrow slider-nav-next"
+              onClick={handleNext}
+              aria-label="Next creation"
+            >
+              ›
+            </button>
+            
             {/* Top Close / Toggle button if revealed */}
             {isRevealed && (
               <button

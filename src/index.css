@@ -1603,20 +1603,553 @@ img {
   border-radius: var(--radius-pill);
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & DECLUTTERING (PHONE POLISH)
+   ========================================================================== */
+.desktop-br {
+  display: inline;
+}
+
+.slider-nav-arrow {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .desktop-br {
+    display: none;
+  }
+
+  /* 1. Global Spacing & Layout */
+  .container, .container-wide {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .section-intro {
+    margin-bottom: 28px;
+  }
+
+  .cozy-tag {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+  }
+
+  .section-headline {
+    font-size: clamp(1.85rem, 6.8vw, 2.35rem);
+    margin-bottom: 10px;
+    line-height: 1.15;
+  }
+
+  .section-subtext {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  /* 2. Declutter Top Banner: Single clean line on phones */
+  .cozy-top-banner {
+    padding: 6px 0;
+  }
+
+  .banner-inner {
+    justify-content: center;
+  }
+
+  .banner-right {
+    display: none !important; /* Hide secondary links that are already in nav */
+  }
+
+  .banner-left {
+    font-size: 0.74rem;
+    gap: 6px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* 3. Sleek, Compact Mobile Header */
+  .cozy-header {
+    background: rgba(251, 248, 243, 0.96);
+  }
+
+  .nav-container {
+    padding: 10px 0;
+  }
+
+  .brand-wrapper {
+    gap: 10px;
+  }
+
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  .brand-name {
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+  }
+
+  .nav-reserve-btn {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* 4. Beautiful, Unclustered Hero */
+  .hero-wrapper {
+    padding: 16px 0 28px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cozy-tag {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.85rem, 6.8vw, 2.25rem);
+    line-height: 1.14;
+    margin-bottom: 12px;
+    letter-spacing: -0.015em;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .btn-honey, .btn-linen {
+    flex: 1;
+    padding: 11px 12px;
+    font-size: 0.84rem;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 999px;
+  }
+
+  .hero-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding-top: 14px;
+    text-align: center;
+  }
+
+  .stat-unit strong {
+    font-size: 1.18rem;
+  }
+
+  .stat-unit span {
+    font-size: 0.66rem;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+
+  .hero-main-photo-frame {
+    aspect-ratio: 16 / 11;
+    border-radius: 20px;
+  }
+
+  .photo-caption-bubble {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    border-radius: 14px;
+  }
+
+  .caption-title {
+    font-size: 1rem;
+  }
+
+  .caption-sub {
+    font-size: 0.68rem;
+  }
+
+  .floating-food-card {
+    top: -10px;
+    right: -4px;
+    padding: 6px 12px;
+    border-radius: 14px;
+  }
+
+  .floating-food-thumb {
+    width: 36px;
+    height: 36px;
+  }
+
+  .food-note-name {
+    font-size: 0.78rem;
+  }
+
+  .food-note-desc {
+    display: none;
+  }
+
+  /* 5. Showcase Slider on Mobile */
+  .showcase-section {
+    padding: 24px 0 44px;
+  }
+
+  .showcase-mac-window {
+    border-radius: 26px;
+    padding: 14px 12px 18px;
+  }
+
+  .showcase-window-header {
+    font-size: 0.7rem;
+    padding: 2px 4px 12px;
+  }
+
   .showcase-stage-panels {
     grid-template-columns: 1fr;
     height: auto;
-    min-height: 480px;
+    min-height: 440px;
+    border-radius: 20px;
   }
 
   .peek-panel {
     display: none;
   }
 
-  .showcase-mac-window {
-    border-radius: 24px;
+  .hero-panel-center {
+    padding: 26px 16px 22px;
+  }
+
+  .slider-nav-arrow {
+    display: flex;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.12);
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease;
+  }
+
+  .slider-nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.22);
+  }
+
+  .slider-nav-prev {
+    left: 8px;
+  }
+
+  .slider-nav-next {
+    right: 8px;
+  }
+
+  .hero-panel-title {
+    font-size: clamp(1.4rem, 5.8vw, 1.8rem);
+    line-height: 1.1;
+  }
+
+  .hero-panel-subtitle {
+    font-size: 0.74rem;
+    margin-top: 4px;
+  }
+
+  .floating-dish-media {
+    width: 170px;
+    height: 170px;
+  }
+
+  .floating-dish-shadow {
+    width: 130px;
+    height: 18px;
+    margin-top: 10px;
+  }
+
+  .btn-reveal-puff {
+    padding: 11px 24px;
+    font-size: 0.84rem;
+  }
+
+  .revealed-secrets-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .secret-icon {
+    font-size: 1.15rem;
+  }
+
+  .secret-title {
+    font-size: 0.84rem;
+  }
+
+  .secret-desc {
+    font-size: 0.75rem;
+  }
+
+  .showcase-window-footer {
+    padding: 14px 6px 2px;
+  }
+
+  .footer-logo-text {
+    font-size: 1.15rem;
+  }
+
+  .footer-reserve-pill {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .social-pill {
+    width: 30px;
+    height: 30px;
+    font-size: 0.82rem;
+  }
+
+  /* 6. Spaces ("Our Corners") on Mobile */
+  .spaces-tabs-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    justify-content: flex-start;
+    padding: 4px 2px 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .spaces-tabs-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .space-tab-pill {
+    flex-shrink: 0;
+    padding: 9px 18px;
+    font-size: 0.84rem;
+    white-space: nowrap;
+  }
+
+  .space-display-card {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .space-card-media {
+    min-height: 220px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .space-card-details {
+    padding: 22px 18px;
+    gap: 14px;
+  }
+
+  .space-title-large {
+    font-size: 1.65rem;
+  }
+
+  .space-desc-text {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .space-perks-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* 7. Table Reservation on Mobile */
+  .reservation-box {
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+
+  .corner-options-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .corner-pick-card {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .corner-emoji {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .corner-name {
+    font-size: 1.05rem;
+  }
+
+  .corner-sub {
+    display: none; /* Keeps corner pick card ultra-clean */
+  }
+
+  .chips-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .chips-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .choice-chip {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .input-two-col {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .cozy-input {
+    font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+    padding: 12px 14px;
+  }
+
+  .reserve-now-btn {
+    padding: 14px 20px;
+    font-size: 0.96rem;
+  }
+
+  .invite-details-bubble {
+    grid-template-columns: 1fr;
+    gap: 8px;
     padding: 14px;
   }
+
+  /* 8. Menu ("Bake & Brew") on Mobile */
+  .menu-filter-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    justify-content: flex-start;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .menu-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-category-btn {
+    flex-shrink: 0;
+    padding: 8px 15px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .diet-pill-btn {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dish-card {
+    border-radius: 20px;
+  }
+
+  .dish-info {
+    padding: 18px;
+  }
+
+  .dish-title {
+    font-size: 1.3rem;
+  }
+
+  .dish-desc {
+    font-size: 0.88rem;
+  }
+
+  /* 9. Stories & Visit on Mobile */
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .story-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .story-quote {
+    font-size: 1.1rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .visit-card-grid {
+    grid-template-columns: 1fr;
+    padding: 22px 16px;
+    border-radius: 22px;
+    gap: 22px;
+  }
+
+  .visit-visual-col {
+    aspect-ratio: 16 / 11;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 }
+
 

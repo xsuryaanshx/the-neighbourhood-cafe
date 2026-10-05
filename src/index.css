@@ -28,6 +28,7 @@
 
   --font-editorial: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-warm: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: 'Alex Brush', cursive;
 
   --radius-pill: 9999px;
   --radius-card: 28px;
@@ -119,6 +120,23 @@ img {
   text-align: center;
   max-width: 640px;
   margin: 0 auto clamp(36px, 5vw, 60px);
+}
+
+.cursive-accent {
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  color: var(--cozy-terracotta);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 0.02em;
+}
+
+.bakehouse-arch-frame {
+  border-radius: 120px 120px 24px 24px !important;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(44, 30, 18, 0.09);
+  border: 1px solid var(--cozy-cream-border);
 }
 
 .cozy-tag {

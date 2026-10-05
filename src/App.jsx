@@ -135,7 +135,8 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="cozy-tag">Sanctuary in Saket</span>
+            <span className="cursive-accent">fresh sourdough & sunlit solarium</span>
+            <span className="cozy-tag">Bakehouse Sanctuary in Saket</span>
             
             <h1 className="hero-headline">
               A place to slow down, <br className="desktop-br" />
@@ -143,7 +144,7 @@ export default function App() {
             </h1>
 
             <p className="hero-description">
-              Sunlit glasshouse solarium, hearth sourdough, and unhurried coffee in Saket, Indore.
+              Tucked behind a mint wrought-iron gate in Saket. Sunlit glasshouse solarium, hearth sourdough, and unhurried coffee for slow hours.
             </p>
 
             <div className="hero-buttons-row">
@@ -190,7 +191,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="hero-main-photo-frame">
+            <div className="hero-main-photo-frame bakehouse-arch-frame">
               <img
                 src="assets/images/solarium-glasshouse.jpg"
                 alt="Sunlit glasshouse solarium with cane chairs and celadon tiles at Neighbourhood Cafe Indore"
@@ -238,6 +239,7 @@ export default function App() {
         <div className="container-wide">
           
           <div className="section-intro">
+            <span className="cursive-accent">crafted for slow afternoons</span>
             <span className="cozy-tag">Interactive Creations</span>
             <h2 className="section-headline">Things We're Known For</h2>
             <p className="section-subtext">
@@ -256,6 +258,7 @@ export default function App() {
         <div className="container">
           
           <div className="section-intro">
+            <span className="cursive-accent">solarium, courtyard & bungalow</span>
             <span className="cozy-tag">Three Distinct Corners</span>
             <h2 className="section-headline">Find Your Quiet Corner</h2>
             <p className="section-subtext">

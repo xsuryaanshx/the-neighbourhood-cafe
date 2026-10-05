@@ -66,6 +66,25 @@ export default function App() {
     return `https://wa.me/919826000000?text=${msg}`;
   };
 
+  // Private Events & Celebrations State
+  const [eventOccasion, setEventOccasion] = useState('Birthday Gathering 🎂');
+  const [eventGuests, setEventGuests] = useState('15–25 Guests');
+  const [eventDate, setEventDate] = useState('Upcoming Weekend');
+  const [eventHostName, setEventHostName] = useState('');
+  const [eventHostPhone, setEventHostPhone] = useState('');
+
+  const handleEventInquirySubmit = (e) => {
+    e.preventDefault();
+    if (!eventHostName.trim() || !eventHostPhone.trim()) {
+      alert('Please share your name and WhatsApp number so our event concierge can reach you!');
+      return;
+    }
+    const msg = encodeURIComponent(
+      `Hello Neighbourhood Cafe Event Concierge! 🥂✨\n\nI would love to inquire about hosting a private gathering:\n• Occasion: ${eventOccasion}\n• Guest Count: ${eventGuests}\n• Date & Time: ${eventDate}\n• Host Name: ${eventHostName}\n• WhatsApp: ${eventHostPhone}\n\nPlease share your private gathering packages, minimum spend, and available corners. Thank you!`
+    );
+    window.open(`https://wa.me/919826000000?text=${msg}`, '_blank');
+  };
+
   return (
     <div className="cozy-app">
       
@@ -107,8 +126,9 @@ export default function App() {
           <nav className="nav-menu">
             <a href="#showcase" className="nav-link">Signatures</a>
             <a href="#spaces" className="nav-link">Our Corners</a>
-            <a href="#menu" className="nav-link">Bake & Brew</a>
             <a href="#reserve" className="nav-link">Save a Table</a>
+            <a href="#events" className="nav-link">Private Events</a>
+            <a href="#menu" className="nav-link">Bake & Brew</a>
             <a href="#visit" className="nav-link">Hours & Location</a>
           </nav>
 
@@ -573,6 +593,176 @@ export default function App() {
             )}
 
           </div>
+        </div>
+      </section>
+
+      {/* PRIVATE GATHERINGS & CELEBRATIONS */}
+      <section className="section events-section" id="events">
+        <div className="container">
+          
+          <div className="section-intro">
+            <span className="cursive-accent">celebrations under glass & starlight</span>
+            <span className="cozy-tag">Private Gatherings & Celebrations</span>
+            <h2 className="section-headline">Host Your Memorable Moments</h2>
+            <p className="section-subtext">
+              From sunlit birthday high-teas in our solarium to starlit courtyard celebrations and creative pop-ups. We curate personalized menus, bespoke tablescapes, and dedicated hospitality for groups of 10 to 45 guests.
+            </p>
+          </div>
+
+          {/* Three Event Types Cards */}
+          <div className="events-cards-grid">
+            
+            <div className="event-type-card">
+              <div className="event-card-media">
+                <img
+                  src="assets/images/solarium-glasshouse.jpg"
+                  alt="Glasshouse High Tea & Birthdays"
+                  loading="lazy"
+                />
+                <span className="event-capacity-tag">10–25 Guests</span>
+              </div>
+              <div className="event-card-body">
+                <h3>Glasshouse High-Tea & Birthdays</h3>
+                <p>Natural daylight, curated sourdough platters, artisanal dessert towers, and reserved solarium corner seating.</p>
+                <div className="event-perk-row">
+                  <span>🍰 Custom Cake Friendly</span>
+                  <span>🌿 Floral Tablescape</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="event-type-card">
+              <div className="event-card-media">
+                <img
+                  src="assets/images/stepped-courtyard.jpg"
+                  alt="Starlit Courtyard Celebrations"
+                  loading="lazy"
+                />
+                <span className="event-capacity-tag">15–40 Guests</span>
+              </div>
+              <div className="event-card-body">
+                <h3>Starlit Courtyard Celebrations</h3>
+                <p>Underlit stone steps, warm heaters, live acoustic friendly, and family-style comfort dining under the evening canopy.</p>
+                <div className="event-perk-row">
+                  <span>🌙 Evening Lighting</span>
+                  <span>🍕 Sourdough Hearth Bar</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="event-type-card">
+              <div className="event-card-media">
+                <img
+                  src="assets/images/facade-entrance.jpg"
+                  alt="Creative Shoots & Brand Popups"
+                  loading="lazy"
+                />
+                <span className="event-capacity-tag">Full Space Buyout</span>
+              </div>
+              <div className="event-card-body">
+                <h3>Creative Shoots & Pop-ups</h3>
+                <p>Editorial natural glasshouse solarium for fashion shoots, private workshops, and brand product showcases.</p>
+                <div className="event-perk-row">
+                  <span>☕ Dedicated Barista</span>
+                  <span>📸 Natural Solarium Sun</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Interactive Event Inquiry Box */}
+          <div className="event-inquiry-box">
+            <div className="inquiry-header-block">
+              <span className="inquiry-sparkle">🥂</span>
+              <h3>Inquire About Dates & Gathering Packages</h3>
+              <p>Tell us what you are celebrating. Our event concierge shares customized menus, minimum spend details, and photos within 2 hours on WhatsApp.</p>
+            </div>
+
+            <form onSubmit={handleEventInquirySubmit} className="inquiry-form-grid">
+              
+              <div className="inquiry-step-unit">
+                <label className="field-label">1. What is the occasion?</label>
+                <div className="chips-row">
+                  {['Birthday Gathering 🎂', 'Anniversary Soiree 🥂', 'High-Tea / Baby Shower 🍵', 'Brand Pop-Up / Shoot ✨', 'Private Dinner 🌙'].map((occ) => (
+                    <button
+                      type="button"
+                      key={occ}
+                      onClick={() => setEventOccasion(occ)}
+                      className={`choice-chip ${eventOccasion === occ ? 'active' : ''}`}
+                    >
+                      {occ}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="inquiry-step-unit">
+                <label className="field-label">2. Estimated number of guests</label>
+                <div className="chips-row">
+                  {['10–15 Guests', '16–25 Guests', '26–40 Guests', '40+ Guests (Full Buyout)'].map((g) => (
+                    <button
+                      type="button"
+                      key={g}
+                      onClick={() => setEventGuests(g)}
+                      className={`choice-chip ${eventGuests === g ? 'active' : ''}`}
+                    >
+                      {g}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="inquiry-inputs-row">
+                <div className="cozy-field">
+                  <label className="field-label">Your Name</label>
+                  <input
+                    type="text"
+                    required
+                    className="cozy-input"
+                    placeholder="e.g. Priyal Sharma"
+                    value={eventHostName}
+                    onChange={(e) => setEventHostName(e.target.value)}
+                  />
+                </div>
+                <div className="cozy-field">
+                  <label className="field-label">WhatsApp Number</label>
+                  <input
+                    type="tel"
+                    required
+                    className="cozy-input"
+                    placeholder="+91 98260 XXXXX"
+                    value={eventHostPhone}
+                    onChange={(e) => setEventHostPhone(e.target.value)}
+                  />
+                </div>
+                <div className="cozy-field">
+                  <label className="field-label">Preferred Date / Month</label>
+                  <input
+                    type="text"
+                    required
+                    className="cozy-input"
+                    placeholder="e.g. Next Saturday, 7:00 PM"
+                    value={eventDate}
+                    onChange={(e) => setEventDate(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="inquiry-cta-row">
+                <motion.button
+                  type="submit"
+                  className="btn-honey-event"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span>Inquire via WhatsApp Event Concierge</span>
+                  <span>💬</span>
+                </motion.button>
+              </div>
+
+            </form>
+          </div>
 
         </div>
       </section>
@@ -782,6 +972,19 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* PERSISTENT MOBILE BOTTOM ACTION BAR */}
+      <div className="mobile-sticky-action-bar">
+        <a href="tel:+919826000000" className="mobile-call-pill" title="Call Cafe Concierge">
+          <span aria-hidden="true">📞</span>
+        </a>
+        <a href="#reserve" className="mobile-reserve-btn">
+          <span>🗓️ Save a Table</span>
+        </a>
+        <a href="#events" className="mobile-event-btn">
+          <span>✨ Private Events</span>
+        </a>
+      </div>
 
     </div>
   );

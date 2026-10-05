@@ -434,6 +434,10 @@ img {
   color: var(--cozy-sand);
 }
 
+.mobile-rating-pill {
+  display: none;
+}
+
 .floating-food-card {
   position: absolute;
   top: -20px;
@@ -1649,33 +1653,20 @@ img {
     line-height: 1.55;
   }
 
-  /* 2. Declutter Top Banner: Single clean line on phones */
+  /* 2. Declutter Top: Hide top banner on phones for pure elegance */
   .cozy-top-banner {
-    padding: 6px 0;
-  }
-
-  .banner-inner {
-    justify-content: center;
-  }
-
-  .banner-right {
-    display: none !important; /* Hide secondary links that are already in nav */
-  }
-
-  .banner-left {
-    font-size: 0.74rem;
-    gap: 6px;
-    justify-content: center;
-    text-align: center;
+    display: none !important;
   }
 
   /* 3. Sleek, Compact Mobile Header */
   .cozy-header {
-    background: rgba(251, 248, 243, 0.96);
+    background: rgba(251, 248, 243, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .nav-container {
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   .brand-wrapper {
@@ -1683,64 +1674,64 @@ img {
   }
 
   .brand-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 1.1rem;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
+    border-radius: 9px;
   }
 
   .brand-name {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     line-height: 1;
   }
 
   .brand-sub {
-    font-size: 0.65rem;
-    letter-spacing: 0.04em;
-    margin-top: 1px;
+    display: none !important; /* Keep brand line ultra-clean on mobile */
   }
 
   .nav-reserve-btn {
-    padding: 7px 16px;
-    font-size: 0.8rem;
+    padding: 7px 15px;
+    font-size: 0.78rem;
     font-weight: 600;
   }
 
   /* 4. Beautiful, Unclustered Hero */
   .hero-wrapper {
-    padding: 16px 0 28px;
+    padding: 20px 0 32px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .cozy-tag {
-    font-size: 0.72rem;
-    padding: 5px 12px;
-    margin-bottom: 10px;
-    letter-spacing: 0.03em;
+    font-size: 0.68rem;
+    padding: 4px 11px;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
   }
 
   .hero-headline {
     font-size: clamp(1.85rem, 6.8vw, 2.25rem);
     line-height: 1.14;
-    margin-bottom: 12px;
-    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
   }
 
   .hero-description {
     font-size: 0.92rem;
     line-height: 1.55;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    color: var(--cozy-mocha);
   }
 
   .hero-buttons-row {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .btn-honey, .btn-linen {
@@ -1753,63 +1744,48 @@ img {
     border-radius: 999px;
   }
 
+  /* Hide stats table on mobile hero so user immediately sees the gorgeous cafe photo */
   .hero-stats-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    padding-top: 14px;
-    text-align: center;
-  }
-
-  .stat-unit strong {
-    font-size: 1.18rem;
-  }
-
-  .stat-unit span {
-    font-size: 0.66rem;
-    line-height: 1.2;
-    margin-top: 2px;
+    display: none !important;
   }
 
   .hero-main-photo-frame {
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 16 / 10;
     border-radius: 20px;
+    box-shadow: 0 14px 34px rgba(44, 30, 18, 0.08);
   }
 
   .photo-caption-bubble {
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    border-radius: 14px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 7px 12px;
+    border-radius: 12px;
   }
 
   .caption-title {
-    font-size: 1rem;
+    font-size: 0.88rem;
   }
 
   .caption-sub {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
   }
 
+  /* Hide floating badge that blocks the glasshouse solarium photo */
   .floating-food-card {
-    top: -10px;
-    right: -4px;
-    padding: 6px 12px;
-    border-radius: 14px;
+    display: none !important;
   }
 
-  .floating-food-thumb {
-    width: 36px;
-    height: 36px;
-  }
-
-  .food-note-name {
-    font-size: 0.78rem;
-  }
-
-  .food-note-desc {
-    display: none;
+  .mobile-rating-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--cozy-mocha);
+    opacity: 0.85;
   }
 
   /* 5. Showcase Slider on Mobile */

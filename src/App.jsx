@@ -132,15 +132,15 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="cozy-tag">A quiet sunlit sanctuary in Saket</span>
+            <span className="cozy-tag">Sanctuary in Saket</span>
             
             <h1 className="hero-headline">
               A place to slow down, <br className="desktop-br" />
-              sip slow coffee, and <em>breathe.</em>
+              sip coffee, and <em>breathe.</em>
             </h1>
 
             <p className="hero-description">
-              Tucked behind a mint wrought-iron gate in Saket. Sunlit glasshouse solarium, hearth-baked sourdough, and unhurried coffee for slow hours.
+              Sunlit glasshouse solarium, hearth sourdough, and unhurried coffee in Saket, Indore.
             </p>
 
             <div className="hero-buttons-row">
@@ -199,6 +199,14 @@ export default function App() {
                 </div>
                 <span style={{ fontSize: '1.4rem' }}>🌿</span>
               </div>
+            </div>
+
+            <div className="mobile-rating-pill">
+              <span>★ 4.6</span>
+              <span>·</span>
+              <span>1,400+ Indore Hearts</span>
+              <span>·</span>
+              <span>Saket Nagar</span>
             </div>
 
             {/* Floating Food Accent */}

@@ -1,0 +1,32 @@
+{
+  "name": "the-neighbourhood-cafe",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Neighbourhood Cafe, Indore. Solarium glasshouse, stepped courtyard, artisanal culinary kitchen, and specialty coffee in Saket Nagar, Indore.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "keywords": [
+    "neighbourhood-cafe",
+    "indore-cafe",
+    "solarium-cafe",
+    "saket-indore",
+    "best-cafe-in-indore"
+  ],
+  "author": "Antigravity Creative Studio",
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^14.0.0",
+    "lucide-react": "^1.52.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.2"
+  }
+}

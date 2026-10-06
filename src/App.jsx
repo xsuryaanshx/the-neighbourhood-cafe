@@ -481,7 +481,7 @@ export default function App() {
                         type="text"
                         required
                         className="cozy-input"
-                        placeholder="e.g. Suryansh Jain"
+                        placeholder="e.g. Aarav Sharma"
                         value={guestName}
                         onChange={(e) => setGuestName(e.target.value)}
                       />
